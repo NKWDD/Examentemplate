@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import LoginView from '../views/LoginView.vue'
 import DashboardView from '../views/DashboardView.vue'
+import TeamView from '../views/TeamView.vue'
 
 const routes = [
   {
@@ -19,6 +20,14 @@ const routes = [
     component: AboutView,
     meta: {
       title: 'Over Ons'
+    }
+  },
+    {
+    path: '/Team',
+    name: 'Team',
+    component: TeamView,
+    meta: {
+      title: 'Team'
     }
   },
   {

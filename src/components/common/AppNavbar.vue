@@ -1,11 +1,15 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <nav class="navbar navbar-expand-lg bg-white fixed-top">
     <div class="container">
       <!-- Brand -->
-      <router-link class="navbar-brand fw-bold" to="/">
-        <i class="bi bi-laptop me-2"></i>
-        Examen App
-      </router-link>
+    <router-link class="navbar-brand" to="/">
+      <img 
+        src="/src/assets/rooienoes_logo_transparent.png" 
+        alt="Logo" 
+        height="125" 
+        class="d-inline-block align-top"
+      >
+    </router-link>
 
       <!-- Mobile toggle -->
       <button 
@@ -42,6 +46,39 @@
               Over Ons
             </router-link>
           </li>
+            <li class="nav-item">
+            <router-link 
+              class="nav-link" 
+              to="/team" 
+              @click="closeMobileMenu"
+              :class="{ 'active': $route.name === 'Team' }"
+            >
+              <i class="bi bi-house me-1"></i>
+              Team
+            </router-link>
+          </li>
+                    <li class="nav-item">
+            <router-link 
+              class="nav-link" 
+              to="/Nieuws" 
+              @click="closeMobileMenu"
+              :class="{ 'active': $route.name === 'Nieuws' }"
+            >
+              <i class="bi bi-house me-1"></i>
+              Nieuws
+            </router-link>
+          </li>
+                    <li class="nav-item">
+            <router-link 
+              class="nav-link" 
+              to="/Contact" 
+              @click="closeMobileMenu"
+              :class="{ 'active': $route.name === 'Contact' }"
+            >
+              <i class="bi bi-house me-1"></i>
+              Contact
+            </router-link>
+          </li>
           <li class="nav-item" v-if="isAuthenticated">
             <router-link 
               class="nav-link" 
@@ -57,16 +94,6 @@
 
         <!-- Right side items -->
         <ul class="navbar-nav">
-          <li class="nav-item" v-if="!isAuthenticated">
-            <router-link 
-              class="nav-link" 
-              to="/login" 
-              @click="closeMobileMenu"
-            >
-              <i class="bi bi-box-arrow-in-right me-1"></i>
-              Inloggen
-            </router-link>
-          </li>
           
           <!-- User dropdown -->
           <li class="nav-item dropdown" v-if="isAuthenticated">
