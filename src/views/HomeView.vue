@@ -167,8 +167,8 @@ export default {
         day: 'numeric'
       });
     },
-    readMore(newsId) {
-      this.$router.push(`/news/${newsId}`);
+    readMore() {
+      this.$router.push(`/Nieuws/`);
     }
   }
 }

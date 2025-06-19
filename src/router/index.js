@@ -4,6 +4,8 @@ import AboutView from '../views/AboutView.vue'
 import LoginView from '../views/LoginView.vue'
 import DashboardView from '../views/DashboardView.vue'
 import TeamView from '../views/TeamView.vue'
+import ContactView from '@/views/ContactView.vue'
+import NieuwsView from '@/views/NieuwsView.vue'
 
 const routes = [
   {
@@ -28,6 +30,22 @@ const routes = [
     component: TeamView,
     meta: {
       title: 'Team'
+    }
+  },
+      {
+    path: '/Contact',
+    name: 'Contact',
+    component: ContactView,
+    meta: {
+      title: 'Contact'
+    }
+  },
+      {
+    path: '/Nieuws',
+    name: 'Nieuws',
+    component: NieuwsView,
+    meta: {
+      title: 'News'
     }
   },
   {
